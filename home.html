@@ -1,0 +1,116 @@
+<html>
+<head>
+    <title>Knighted Chess 2.0</title>
+    <link rel="shortcut icon" type="image/png" href="images/bPawn.png" />
+    <script src="Assets/Scripts/script.js"></script>
+
+    <link rel="stylesheet" href="Assets/style.css" />
+</head>
+
+<body>
+    <h1 class="title">Knighted Chess 2.0</h1>
+
+    <div class="grid">
+        <div style="position: relative;">
+
+            <button type="button" id="clearButton" onclick="clearTile()">Clr Tile</button>
+            <button type="button" onclick="reset()">Reset</button>
+        </div>
+
+        <div class="grid-3">
+            <div class="item brown" id="00" style="background-image: url(images/bRook.png);" onclick="clicked('00')"></div>
+            <div class="item tan"   id="01" style="background-image: url(images/bBish.png);" onclick="clicked('01')"></div>
+            <div class="item brown" id="02" style="background-image: url(images/bKnig.png);" onclick="clicked('02')"></div>
+            <div class="item tan"   id="03" style="background-image: url(images/bQuee.png);" onclick="clicked('03')"></div>
+            <div class="item brown" id="04" style="background-image: url(images/bKing.png);" onclick="clicked('04')"></div>
+            <div class="item tan"   id="05" style="background-image: url(images/bKnig.png);" onclick="clicked('05')"></div>
+            <div class="item brown" id="06" style="background-image: url(images/bBish.png);" onclick="clicked('06')"></div>
+            <div class="item tan"   id="07" style="background-image: url(images/bRook.png);" onclick="clicked('07')"></div>
+
+            <div class="item tan"   id="10" style="background-image: url(images/bKnig.png);" onclick="clicked('10')"></div>
+            <div class="item brown" id="11" style="background-image: url(images/bKnig.png);" onclick="clicked('11')"></div>
+            <div class="item tan"   id="12" style="background-image: url(images/bKnig.png);" onclick="clicked('12')"></div>
+            <div class="item brown" id="13" style="background-image: url(images/bKnig.png);" onclick="clicked('13')"></div>
+            <div class="item tan"   id="14" style="background-image: url(images/bKnig.png);" onclick="clicked('14')"></div>
+            <div class="item brown" id="15" style="background-image: url(images/bKnig.png);" onclick="clicked('15')"></div>
+            <div class="item tan"   id="16" style="background-image: url(images/bKnig.png);" onclick="clicked('16')"></div>
+            <div class="item brown" id="17" style="background-image: url(images/bKnig.png);" onclick="clicked('17')"></div>
+
+            <div class="item brown" id="20" style="" onclick="clicked('20')"></div>
+            <div class="item tan"   id="21" style="" onclick="clicked('21')"></div>
+            <div class="item brown" id="22" style="" onclick="clicked('22')"></div>
+            <div class="item tan"   id="23" style="" onclick="clicked('23')"></div>
+            <div class="item brown" id="24" style="" onclick="clicked('24')"></div>
+            <div class="item tan"   id="25" style="" onclick="clicked('25')"></div>
+            <div class="item brown" id="26" style="" onclick="clicked('26')"></div>
+            <div class="item tan"   id="27" style="" onclick="clicked('27')"></div>
+
+            <div class="item tan"   id="30" style="" onclick="clicked('30')"></div>
+            <div class="item brown" id="31" style="" onclick="clicked('31')"></div>
+            <div class="item tan"   id="32" style="" onclick="clicked('32')"></div>
+            <div class="item brown" id="33" style="" onclick="clicked('33')"></div>
+            <div class="item tan"   id="34" style="" onclick="clicked('34')"></div>
+            <div class="item brown" id="35" style="" onclick="clicked('35')"></div>
+            <div class="item tan"   id="36" style="" onclick="clicked('36')"></div>
+            <div class="item brown" id="37" style="" onclick="clicked('37')"></div>
+
+            <div class="item brown" id="40" style="" onclick="clicked('40')"></div>
+            <div class="item tan"   id="41" style="" onclick="clicked('41')"></div>
+            <div class="item brown" id="42" style="" onclick="clicked('42')"></div>
+            <div class="item tan"   id="43" style="" onclick="clicked('43')"></div>
+            <div class="item brown" id="44" style="" onclick="clicked('44')"></div>
+            <div class="item tan"   id="45" style="" onclick="clicked('45')"></div>
+            <div class="item brown" id="46" style="" onclick="clicked('46')"></div>
+            <div class="item tan"   id="47" style="" onclick="clicked('47')"></div>
+
+            <div class="item tan"   id="50" style="" onclick="clicked('50')"></div>
+            <div class="item brown" id="51" style="" onclick="clicked('51')"></div>
+            <div class="item tan"   id="52" style="" onclick="clicked('52')"></div>
+            <div class="item brown" id="53" style="" onclick="clicked('53')"></div>
+            <div class="item tan"   id="54" style="" onclick="clicked('54')"></div>
+            <div class="item brown" id="55" style="" onclick="clicked('55')"></div>
+            <div class="item tan"   id="56" style="" onclick="clicked('56')"></div>
+            <div class="item brown" id="57" style="" onclick="clicked('57')"></div>
+
+            <div class="item brown" id="60" style="background-image: url(images/wKnig.png);" onclick="clicked('60')"></div>
+            <div class="item tan"   id="61" style="background-image: url(images/wKnig.png);" onclick="clicked('61')"></div>
+            <div class="item brown" id="62" style="background-image: url(images/wKnig.png);" onclick="clicked('62')"></div>
+            <div class="item tan"   id="63" style="background-image: url(images/wKnig.png);" onclick="clicked('63')"></div>
+            <div class="item brown" id="64" style="background-image: url(images/wKnig.png);" onclick="clicked('64')"></div>
+            <div class="item tan"   id="65" style="background-image: url(images/wKnig.png);" onclick="clicked('65')"></div>
+            <div class="item brown" id="66" style="background-image: url(images/wKnig.png);" onclick="clicked('66')"></div>
+            <div class="item tan"   id="67" style="background-image: url(images/wKnig.png);" onclick="clicked('67')"></div>
+
+            <div class="item tan"   id="70" style="background-image: url(images/wRook.png);" onclick="clicked('70')"></div>
+            <div class="item brown" id="71" style="background-image: url(images/wBish.png);" onclick="clicked('71')"></div>
+            <div class="item tan"   id="72" style="background-image: url(images/wKnig.png);" onclick="clicked('72')"></div>
+            <div class="item brown" id="73" style="background-image: url(images/wQuee.png);" onclick="clicked('73')"></div>
+            <div class="item tan"   id="74" style="background-image: url(images/wKing.png);" onclick="clicked('74')"></div>
+            <div class="item brown" id="75" style="background-image: url(images/wKnig.png);" onclick="clicked('75')"></div>
+            <div class="item tan"   id="76" style="background-image: url(images/wBish.png);" onclick="clicked('76')"></div>
+            <div class="item brown" id="77" style="background-image: url(images/wRook.png);" onclick="clicked('77')"></div>
+        </div>
+
+        <div>
+            <h1>Replace Pieces</h1>
+            <div class="grid-2">
+                <button type="button" class="item" style="background-image: url(images/bKnig.png);" onclick="replace('bKnig')"></button>
+                <button type="button" class="item" style="background-image: url(images/wKnig.png)"  onclick="replace('wKnig')"></button>
+
+                <button type="button" class="item" style="background-image: url(images/bRook.png);" onclick="replace('bRook')"></button>
+                <button type="button" class="item" style="background-image: url(images/wRook.png)"  onclick="replace('wRook')"></button>
+
+                <button type="button" class="item" style="background-image: url(images/bBish.png);" onclick="replace('bBish')"></button>
+                <button type="button" class="item" style="background-image: url(images/wBish.png)"  onclick="replace('wBish')"></button>
+
+                <button type="button" class="item" style="background-image: url(images/bQuee.png);" onclick="replace('bQuee')"></button>
+                <button type="button" class="item" style="background-image: url(images/wQuee.png)"  onclick="replace('wQuee')"></button>
+
+                <button type="button" class="item" style="background-image: url(images/bKing.png);" onclick="replace('bKing')"></button>
+                <button type="button" class="item" style="background-image: url(images/wKing.png)"  onclick="replace('wKing')"></button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
